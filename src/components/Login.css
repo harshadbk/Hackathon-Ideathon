@@ -1,379 +1,396 @@
 /* ===============================
-   RESET
+GLOBAL RESET
 ================================ */
-* {
-  box-sizing: border-box;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body {
-  margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background: #f2f4f7;
-  color: #1f2937;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
+body{
+font-family:"Segoe UI",Arial,sans-serif;
+background:#f2f4f7;
+color:#1f2937;
+min-height:100vh;
 }
 
 /* ===============================
-   MAIN LAYOUT - CENTERED STACK
+MAIN PAGE LAYOUT
 ================================ */
-.login-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  width: 100%;
-  max-width: 1200px;
+
+.login-wrapper{
+width:100%;
+min-height:100vh;
+
+display:grid;
+grid-template-columns:1fr 1.2fr;
+gap:30px;
+
+padding:40px;
 }
 
 /* ===============================
-   GOVERNMENT INFO PANEL
+LEFT PANEL (RTI INFO)
 ================================ */
-.login-hero {
-  background: #0b4f8a;
-  color: #ffffff;
-  padding: 40px;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 800px;
-  box-shadow: 0 4px 12px rgba(11, 79, 138, 0.15);
+
+.login-hero{
+background:#0b4f8a;
+color:#ffffff;
+
+padding:50px;
+border-radius:14px;
+
+display:flex;
+align-items:center;
+
+box-shadow:0 6px 20px rgba(0,0,0,0.15);
 }
 
-.hero-content {
-  width: 100%;
+.hero-content{
+width:100%;
 }
 
-/* GOV HEADER */
-.hero-logo {
-  font-size: 18px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 24px;
-  opacity: 0.95;
+.hero-title2{
+font-size:36px;
+font-weight:700;
+margin-bottom:10px;
 }
 
-.hero-title2 {
-  font-size: 36px;
-  font-weight: 700;
-  margin: 0 0 6px;
+.hero-description{
+font-size:15px;
+line-height:1.7;
+margin-bottom:28px;
+opacity:0.95;
 }
 
-.login-hero .hero-title2 {
-  color: #ffffff !important;
+.hero-features2{
+display:grid;
+gap:12px;
 }
 
-.hero-subtitle {
-  font-size: 16px;
-  font-weight: 600;
-  opacity: 0.95;
-  margin-bottom: 18px;
-}
+.feature-item2{
+padding:12px 14px;
+font-size:14px;
+font-weight:500;
+color:#000000;
 
-.hero-description {
-  font-size: 14px;
-  line-height: 1.7;
-  margin-bottom: 32px;
-  max-width: 100%;
-}
-
-/* GOV FEATURE LIST */
-.hero-features2 {
-  display: grid;
-  gap: 12px;
-}
-
-.hero-features2 .feature-item2 {
-  padding: 12px 14px;
-  font-size: 14px;
-  font-weight: 500;
-  color: #000000;
-  background-color: #ffffff;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
+background:#ffffff;
+border:1px solid #d1d5db;
+border-radius:6px;
 }
 
 /* ===============================
-   AUTH PANEL
+RIGHT PANEL
 ================================ */
-.login-auth {
-  background: #f8fafc;
-  border-radius: 12px;
-  padding: 30px;
-  width: 100%;
-  max-width: 800px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-}
 
-/* CARD */
-.auth-container {
-  width: 100%;
-  max-width: 100%;
-  background: #ffffff;
-  border: 1px solid #cbd5e1;
-  padding: 26px;
-  border-radius: 8px;
+.login-auth{
+display:grid;
+grid-template-columns:1fr 320px;
+gap:20px;
 }
 
 /* ===============================
-   TABS
+LOGIN CARD
 ================================ */
-.auth-tabs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: 22px;
-  border: 1px solid #cbd5e1;
-  border-radius: 4px;
-  overflow: hidden;
-}
 
-.auth-tab {
-  padding: 12px;
-  background: #e5e7eb;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s;
-}
+.auth-container{
+background:#ffffff;
+border-radius:10px;
+border:1px solid #d1d5db;
 
-.auth-tab.active {
-  background: #0b4f8a;
-  color: white;
-}
+padding:30px;
 
-.auth-tab:hover:not(.active) {
-  background: #d1d5db;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* ===============================
-   FORM
+AUTH TABS
 ================================ */
-.auth-form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+
+.auth-tabs{
+display:grid;
+grid-template-columns:1fr 1fr;
+
+border:1px solid #cbd5e1;
+border-radius:6px;
+
+overflow:hidden;
+margin-bottom:20px;
 }
 
-.form-label {
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 4px;
-  display: block;
+.auth-tab{
+padding:12px;
+
+border:none;
+background:#e5e7eb;
+
+font-weight:600;
+cursor:pointer;
+transition:0.2s;
 }
 
-.form-input {
-  padding: 10px 12px;
-  border: 1px solid #9ca3af;
-  font-size: 14px;
-  width: 100%;
-  border-radius: 4px;
-  transition: border-color 0.2s;
+.auth-tab.active{
+background:#0b4f8a;
+color:white;
 }
 
-.form-input:focus {
-  outline: none;
-  border-color: #0b4f8a;
-  box-shadow: 0 0 0 3px rgba(11, 79, 138, 0.1);
+.auth-tab:hover:not(.active){
+background:#d1d5db;
 }
 
 /* ===============================
-   ROLE SELECTION
+FORM
 ================================ */
-.role-grid-login {
-  display: grid;
-  gap: 10px;
+
+.auth-form{
+display:flex;
+flex-direction:column;
+gap:14px;
 }
 
-.role-card-login {
-  border: 1px solid #9ca3af;
-  padding: 12px;
-  cursor: pointer;
-  background: #ffffff;
-  border-radius: 6px;
-  transition: all 0.2s;
+.form-label{
+font-size:13px;
+font-weight:600;
+margin-bottom:4px;
 }
 
-.role-card-login:hover {
-  background: #f1f5f9;
-  border-color: #0b4f8a;
+.role-card-login{
+  border:1px solid #9ca3af;
+  padding:12px;
+  border-radius:6px;
+  cursor:pointer;
+  transition:0.2s;
+  background:white;
 }
 
-.role-card-login.selected {
-  background: #e6f0fa;
-  border-color: #0b4f8a;
-  box-shadow: 0 0 0 3px rgba(11, 79, 138, 0.1);
+.role-card-login:hover{
+  border-color:#0b4f8a;
+  background:#f1f5f9;
 }
 
-.role-name-login {
-  font-size: 14px;
-  font-weight: 700;
+.role-card-login.selected{
+  background:#e6f0fa;
+  border-color:#0b4f8a;
+  box-shadow:0 0 0 3px rgba(11,79,138,0.15);
 }
 
-.role-desc-login {
-  font-size: 12px;
-  margin-top: 4px;
-  color: #374151;
+.form-input{
+padding:10px 12px;
+
+border:1px solid #9ca3af;
+border-radius:4px;
+
+font-size:14px;
+width:100%;
+
+transition:0.2s;
+}
+
+.form-input:focus{
+outline:none;
+border-color:#0b4f8a;
+box-shadow:0 0 0 3px rgba(11,79,138,0.1);
 }
 
 /* ===============================
-   BUTTON
+ROLE SELECTION
 ================================ */
-.auth-button {
-  margin-top: 8px;
-  padding: 12px;
-  background: #0b4f8a;
-  color: white;
-  font-size: 15px;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.2s;
+
+.role-grid-login{
+display:grid;
+gap:10px;
 }
 
-.auth-button:hover:not(:disabled) {
-  background: #094275;
+.role-card-login{
+border:1px solid #9ca3af;
+padding:12px;
+
+cursor:pointer;
+
+background:#ffffff;
+border-radius:6px;
+
+transition:0.2s;
 }
 
-.auth-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+.role-card-login:hover
+
+.role-card-login.selected{
+background:#e6f0fa;
+border-color:#0b4f8a;
+
+box-shadow:0 0 0 3px rgba(11,79,138,0.1);
+}
+
+.role-name-login{
+font-size:14px;
+font-weight:700;
+}
+
+.role-desc-login{
+font-size:12px;
+margin-top:4px;
+color:#374151;
 }
 
 /* ===============================
-   INFO BOX
+LOGIN BUTTON
 ================================ */
-.auth-info {
-  margin-top: 14px;
-  padding: 10px;
-  font-size: 12px;
-  background: #f0f9ff;
-  border-left: 4px solid #0b4f8a;
-  border-radius: 4px;
+
+.auth-button{
+margin-top:10px;
+
+padding:12px;
+
+background:#0b4f8a;
+color:white;
+
+font-size:15px;
+font-weight:600;
+
+border:none;
+border-radius:4px;
+
+cursor:pointer;
+transition:0.2s;
+}
+
+.auth-button:hover:not(:disabled){
+background:#094275;
+}
+
+.auth-button:disabled{
+opacity:0.6;
+cursor:not-allowed;
 }
 
 /* ===============================
-   INFO SECTIONS (BLUE CARDS)
+INFO MESSAGE
 ================================ */
-.info-section {
-  background: #0b5ed7; /* govt blue */
-  color: #ffffff;
-  padding: 16px 18px;
-  border-radius: 8px;
-  border-left: 5px solid #ffffff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin-bottom: 16px;
-  width: 100%;
-}
 
-.info-section:last-child {
-  margin-bottom: 0;
-}
+.auth-info{
+margin-top:14px;
 
-.info-section:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(11, 94, 215, 0.35);
-}
+padding:10px;
 
-.info-section h3 {
-  font-size: 16px;
-  font-weight: 700;
-  color: #ffffff;
-  margin-bottom: 8px;
-  letter-spacing: 0.3px;
-}
+font-size:12px;
 
-.info-section p {
-  font-size: 13.5px;
-  color: #eaf2ff;
-  line-height: 1.7;
-}
+background:#f0f9ff;
+border-left:4px solid #0b4f8a;
 
-/* List styling */
-.info-section ul {
-  padding-left: 0;
-  list-style: none;
-  margin-top: 6px;
-}
-
-.info-section li {
-  font-size: 13.5px;
-  color: #f8fafc;
-  line-height: 1.6;
-  padding-left: 22px;
-  position: relative;
-  margin-bottom: 6px;
-}
-
-.info-section li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  color: #ffffff;
-  font-weight: 700;
+border-radius:4px;
 }
 
 /* ===============================
-   RESPONSIVE
+RIGHT SIDE INFO CARDS
 ================================ */
-@media (max-width: 1024px) {
-  .login-hero,
-  .login-auth {
-    max-width: 700px;
-  }
-  
-  .hero-title2 {
-    font-size: 32px;
-  }
+
+.right-side-panel{
+display:flex;
+flex-direction:column;
+gap:16px;
 }
 
-@media (max-width: 768px) {
-  .login-wrapper {
-    gap: 20px;
-  }
-  
-  .login-hero,
-  .login-auth {
-    padding: 30px 20px;
-  }
-  
-  .hero-title2 {
-    font-size: 28px;
-  }
-  
-  .auth-container {
-    padding: 20px;
-  }
-  
-  .auth-tabs {
-    grid-template-columns: 1fr;
-  }
+.info-section{
+background:#0b5ed7;
+color:white;
+
+padding:16px 18px;
+
+border-radius:8px;
+border-left:5px solid white;
+
+transition:0.2s;
 }
 
-@media (max-width: 480px) {
-  body {
-    padding: 10px;
-  }
-  
-  .login-hero {
-    padding: 20px 16px;
-  }
-  
-  .login-auth {
-    padding: 20px 16px;
-  }
-  
-  .hero-title2 {
-    font-size: 24px;
-  }
-  
-  .auth-container {
-    padding: 16px;
-  }
-  
-  .role-grid-login {
-    grid-template-columns: 1fr;
-  }
+.info-section:hover{
+transform:translateY(-3px);
+box-shadow:0 8px 18px rgba(11,94,215,0.35);
+}
+
+.info-section h3{
+font-size:16px;
+font-weight:700;
+margin-bottom:8px;
+}
+
+.info-section p{
+font-size:13.5px;
+line-height:1.7;
+}
+
+.info-section ul{
+list-style:none;
+margin-top:6px;
+}
+
+.info-section li{
+font-size:13.5px;
+padding-left:22px;
+margin-bottom:6px;
+position:relative;
+}
+
+.info-section li::before{
+content:"✔";
+position:absolute;
+left:0;
+}
+
+/* ===============================
+TABLET RESPONSIVE
+================================ */
+
+@media(max-width:1024px){
+
+.login-wrapper{
+grid-template-columns:1fr;
+}
+
+.login-auth{
+grid-template-columns:1fr;
+}
+
+.right-side-panel{
+flex-direction:row;
+flex-wrap:wrap;
+}
+
+.info-section{
+flex:1 1 45%;
+}
+
+.hero-title2{
+font-size:30px;
+}
+
+}
+
+/* ===============================
+MOBILE RESPONSIVE
+================================ */
+
+@media(max-width:600px){
+
+.login-wrapper{
+padding:20px;
+}
+
+.login-hero{
+padding:30px;
+}
+
+.auth-container{
+padding:20px;
+}
+
+.hero-title2{
+font-size:26px;
+}
+
+.info-section{
+flex:1 1 100%;
+}
+
 }

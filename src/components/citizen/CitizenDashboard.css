@@ -1,0 +1,35 @@
+/* ================= DASHBOARD WRAPPER ================= */
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablet (1024px - 1441px) */
+@media (max-width: 1440px) and (min-width: 1025px) {
+  /* Content adjusts via child component media queries */
+}
+
+/* Medium Tablet (769px - 1024px) */
+@media (max-width: 1024px) {
+  .dashboard-wrapper {
+    gap: 24px;
+  }
+}
+
+/* Mobile (481px - 768px) */
+@media (max-width: 768px) {
+  .dashboard-wrapper {
+    gap: 24px;
+  }
+}
+
+/* Small Mobile (320px - 480px) */
+@media (max-width: 480px) {
+  .dashboard-wrapper {
+    gap: 20px;
+  }
+}

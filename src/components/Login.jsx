@@ -125,11 +125,14 @@ export default function Login({ onLogin }) {
             {/* Role Selection */}
             <div className="form-group">
               <label className="form-label">Select User Role</label>
+
               <div className="role-grid-login">
                 {roles.map((role) => (
                   <div
                     key={role.id}
-                    className={`role-card-login ${selectedRole === role.id ? "selected" : ""}`}
+                    className={`role-card-login ${
+                      selectedRole === role.id ? "selected" : ""
+                    }`}
                     onClick={() => setSelectedRole(role.id)}
                   >
                     <div className="role-name-login">{role.label}</div>

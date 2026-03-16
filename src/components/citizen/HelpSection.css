@@ -1,0 +1,90 @@
+/* ================= HELP & SUPPORT SECTION ================= */
+.help-section {
+  width: 100%;
+}
+
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.help-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.help-card:hover {
+  border-color: #2563eb;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12);
+}
+
+.help-icon {
+  font-size: 36px;
+}
+
+.help-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.help-card p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+/* Tablet (1024px - 1441px) */
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .help-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Medium Tablet (769px - 1024px) */
+@media (max-width: 1024px) {
+  .help-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .help-card {
+    padding: 18px;
+  }
+}
+
+/* Mobile (481px - 768px) */
+@media (max-width: 768px) {
+  .help-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .help-card {
+    padding: 18px;
+  }
+}
+
+/* Small Mobile (320px - 480px) */
+@media (max-width: 480px) {
+  .help-card {
+    padding: 14px;
+  }
+
+  .help-card h3 {
+    font-size: 14px;
+  }
+
+  .help-card p {
+    font-size: 12px;
+  }
+}
