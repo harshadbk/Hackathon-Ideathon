@@ -40,3 +40,107 @@
 .read-the-docs {
   color: #888;
 }
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+
+/* Tablet & Small Desktop (1025px - 1440px) */
+@media (max-width: 1440px) and (min-width: 1025px) {
+  #root {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .card {
+    padding: 1.5em;
+  }
+
+  .logo {
+    height: 5em;
+    padding: 1.2em;
+  }
+}
+
+/* Tablet Portrait (768px - 1024px) */
+@media (max-width: 1024px) {
+  #root {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .card {
+    padding: 1.5em;
+  }
+
+  .logo {
+    height: 4.5em;
+    padding: 1em;
+  }
+}
+
+/* Mobile Large (481px - 767px) */
+@media (max-width: 767px) {
+  #root {
+    max-width: 100%;
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.2em;
+  }
+
+  .logo {
+    height: 4em;
+    padding: 0.8em;
+  }
+}
+
+/* Mobile Medium (401px - 480px) */
+@media (max-width: 480px) {
+  #root {
+    max-width: 100%;
+    padding: 0.8rem;
+  }
+
+  .card {
+    padding: 1em;
+  }
+
+  .logo {
+    height: 3.5em;
+    padding: 0.7em;
+  }
+
+  .read-the-docs {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Small (321px - 400px) */
+@media (max-width: 400px) {
+  #root {
+    padding: 0.6rem;
+  }
+
+  .logo {
+    height: 3em;
+    padding: 0.5em;
+  }
+}
+
+/* Mobile Extra Small (max 320px) */
+@media (max-width: 320px) {
+  #root {
+    padding: 0.5rem;
+  }
+
+  .logo {
+    height: 2.5em;
+    padding: 0.4em;
+  }
+
+  .card {
+    padding: 0.8em;
+  }
+}

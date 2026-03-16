@@ -10,11 +10,9 @@
   --nav-bg: #ffffff;
 }
 
-.landing-root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background: var(--bg);
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
 /* =====================================================
@@ -24,20 +22,26 @@
 .landing-nav {
   position: sticky;
   top: 0;
-  z-index: 50;
-  background: var(--nav-bg);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f8fafb 0%, #f0f4f8 100%);
   border-bottom: 1px solid var(--border);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-  padding: 10px 16px;
+  z-index: 50;
 }
 
 .landing-nav-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 14px 28px;
+  width: 100%;
+  max-width: 1200px;   /* optional: remove if you want edge-to-edge */
+  margin: 0 auto;     /* centers content */
+  padding: 10px 16px; /* inner spacing */
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+}
+
+.landing-nav-container {
+  max-width: none;
 }
 
 .landing-logo {
@@ -52,8 +56,7 @@
 
 .landing-nav-cta {
   padding: 10px 20px;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  color: white;
+  color:linear-gradient(135deg, #f8fafb 0%, #f0f4f8 100%);
   border: none;
   border-radius: 8px;
   font-weight: 600;

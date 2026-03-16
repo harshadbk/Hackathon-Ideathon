@@ -1,64 +1,69 @@
-import { useNavigate } from 'react-router-dom'
-import { useState, useRef, useEffect } from 'react'
-import './LandingPage.css'
+import { useNavigate } from "react-router-dom";
+import { useState, useRef, useEffect } from "react";
+import "./LandingPage.css";
 
 // Use the filenames you actually put in src/assets
-import logoImg from '../assets/RTI2.png'
-import heroImg from '../assets/RTI1.jpg'
+import logoImg from "../assets/RTI2.png";
+import heroImg from "../assets/RTI1.jpg";
 
 export default function LandingPage({ onLogin }) {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   // refs used by the nav buttons
-  const heroRef = useRef(null)
-  const featuresRef = useRef(null)
-  const rolesRef = useRef(null)
+  const heroRef = useRef(null);
+  const featuresRef = useRef(null);
+  const rolesRef = useRef(null);
 
-  const [showTour, setShowTour] = useState(false)
+  const [showTour, setShowTour] = useState(false);
 
   useEffect(() => {
     // placeholder if you plan to animate stats later
-    return () => {}
-  }, [])
+    return () => {};
+  }, []);
 
   const scrollTo = (ref) => {
-    if (ref && ref.current) ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
+    if (ref && ref.current)
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
 
   const handleGetStarted = () => {
-    navigate('/login')
-  }
+    navigate("/login");
+  };
 
   const handleTryDemo = () => {
-    if (typeof onLogin === 'function') onLogin()
-    navigate('/demo')
-  }
+    if (typeof onLogin === "function") onLogin();
+    navigate("/demo");
+  };
 
   return (
     <div className="landing-root">
       {/* Navigation */}
       <nav className="landing-nav" role="navigation" aria-label="Main">
-  <div className="landing-nav-container">
-    
-    <div 
-      className="landing-logo" 
-      onClick={() => scrollTo(heroRef)} 
-      style={{ cursor: 'pointer' }}
-    >
-      <span className="landing-logo-text">RTI Assistant</span>
-    </div>
+        <div className="landing-nav-container">
+          <div
+            className="landing-logo"
+            onClick={() => scrollTo(heroRef)}
+            style={{ cursor: "pointer" }}
+          >
+            <span className="landing-logo-text">RTI Assistant</span>
+          </div>
 
-<div className="landing-nav-buttons">
-  <button className="nav-btn" onClick={() => scrollTo(featuresRef)}>Features</button>
-  <button className="nav-btn" onClick={() => scrollTo(rolesRef)}>Roles</button>
-  <button className="nav-btn nav-demo" onClick={handleTryDemo}>Try Demo</button>
-  <button className="nav-btn nav-primary" onClick={handleGetStarted}>Sign In</button>
-</div>
-
-
-  </div>
-</nav>
-
+          <div className="landing-nav-buttons">
+            <button className="nav-btn" onClick={() => scrollTo(featuresRef)}>
+              Features
+            </button>
+            <button className="nav-btn" onClick={() => scrollTo(rolesRef)}>
+              Roles
+            </button>
+            <button className="nav-btn nav-demo" onClick={handleTryDemo}>
+              Try Demo
+            </button>
+            <button className="nav-btn nav-primary" onClick={handleGetStarted}>
+              Sign In
+            </button>
+          </div>
+        </div>
+      </nav>
 
       {/* Hero Section */}
       <section className="landing-hero" ref={heroRef}>
@@ -66,14 +71,24 @@ export default function LandingPage({ onLogin }) {
           <div className="hero-content">
             <h1 className="hero-title">Right to Information, Made Easy</h1>
             <p className="hero-subtitle">
-              Your AI-powered companion for filing RTI requests, tracking appeals, and accessing government information effortlessly.
+              Your AI-powered companion for filing RTI requests, tracking
+              appeals, and accessing government information effortlessly.
             </p>
 
             {/* CTA Buttons */}
             <div className="hero-buttons">
-              <button className="btn-primary" onClick={handleGetStarted}>Start Now</button>
-              <button className="btn-secondary" onClick={() => setShowTour(true)}>Learn More</button>
-              <button className="btn-ghost" onClick={handleTryDemo}>Try Demo</button>
+              <button className="btn-primary" onClick={handleGetStarted}>
+                Start Now
+              </button>
+              <button
+                className="btn-secondary"
+                onClick={() => setShowTour(true)}
+              >
+                Learn More
+              </button>
+              <button className="btn-ghost" onClick={handleTryDemo}>
+                Try Demo
+              </button>
             </div>
 
             {/* Stats */}
@@ -103,14 +118,19 @@ export default function LandingPage({ onLogin }) {
       <section className="landing-features" ref={featuresRef}>
         <div className="features-container">
           <h2 className="features-title">Powerful Features for RTI Success</h2>
-          <p className="features-subtitle">Everything you need to exercise your Right to Information</p>
+          <p className="features-subtitle">
+            Everything you need to exercise your Right to Information
+          </p>
 
           <div className="features-grid">
             {/* Feature cards (same as before) */}
             <div className="feature-card">
               <div className="feature-icon">🤖</div>
               <h3>AI-Powered Drafting</h3>
-              <p>Smart templates and AI assistance to draft perfect RTI requests in minutes.</p>
+              <p>
+                Smart templates and AI assistance to draft perfect RTI requests
+                in minutes.
+              </p>
               <ul className="feature-list">
                 <li>Auto-detect departments</li>
                 <li>Smart suggestions</li>
@@ -121,7 +141,10 @@ export default function LandingPage({ onLogin }) {
             <div className="feature-card">
               <div className="feature-icon">📊</div>
               <h3>Real-Time Tracking</h3>
-              <p>Monitor your RTI requests with live updates and detailed timeline visualization.</p>
+              <p>
+                Monitor your RTI requests with live updates and detailed
+                timeline visualization.
+              </p>
               <ul className="feature-list">
                 <li>Live status updates</li>
                 <li>Timeline tracking</li>
@@ -132,7 +155,10 @@ export default function LandingPage({ onLogin }) {
             <div className="feature-card">
               <div className="feature-icon">⚡</div>
               <h3>Auto Appeal Generation</h3>
-              <p>Automatically generate appeals if your RTI isn't responded on time.</p>
+              <p>
+                Automatically generate appeals if your RTI isn't responded on
+                time.
+              </p>
               <ul className="feature-list">
                 <li>Auto-generate appeals</li>
                 <li>Compliance templates</li>
@@ -154,7 +180,10 @@ export default function LandingPage({ onLogin }) {
             <div className="step">
               <div className="step-number">1</div>
               <h3>Select Role</h3>
-              <p>Choose whether you're a Citizen, PIO Officer, or Appellate Authority</p>
+              <p>
+                Choose whether you're a Citizen, PIO Officer, or Appellate
+                Authority
+              </p>
             </div>
 
             <div className="step">
@@ -198,7 +227,9 @@ export default function LandingPage({ onLogin }) {
             <div className="role-card">
               <div className="role-icon">👨‍💼</div>
               <h3>For PIO Officers</h3>
-              <p>Manage RTI requests, respond efficiently, and maintain records</p>
+              <p>
+                Manage RTI requests, respond efficiently, and maintain records
+              </p>
               <div className="role-features">
                 <span>📋 Request Management</span>
                 <span>📅 Deadline Tracking</span>
@@ -209,7 +240,9 @@ export default function LandingPage({ onLogin }) {
             <div className="role-card">
               <div className="role-icon">⚖️</div>
               <h3>For Appellate Authority</h3>
-              <p>Review appeals, maintain compliance, and ensure fair decisions</p>
+              <p>
+                Review appeals, maintain compliance, and ensure fair decisions
+              </p>
               <div className="role-features">
                 <span>📄 Appeal Review</span>
                 <span>⚖️ Case Management</span>
@@ -225,7 +258,9 @@ export default function LandingPage({ onLogin }) {
         <div className="cta-container">
           <h2>Ready to Exercise Your Right to Information?</h2>
           <p>Join thousands of citizens empowering themselves with knowledge</p>
-          <button className="btn-large" onClick={handleGetStarted}>Get Started for Free</button>
+          <button className="btn-large" onClick={handleGetStarted}>
+            Get Started for Free
+          </button>
         </div>
       </section>
 
@@ -240,18 +275,40 @@ export default function LandingPage({ onLogin }) {
           <div className="footer-section">
             <h4>Quick Links</h4>
             <ul>
-              <li><a onClick={() => scrollTo(featuresRef)} style={{ cursor: 'pointer' }}>Features</a></li>
-              <li><a onClick={() => scrollTo(heroRef)} style={{ cursor: 'pointer' }}>How It Works</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li>
+                <a
+                  onClick={() => scrollTo(featuresRef)}
+                  style={{ cursor: "pointer" }}
+                >
+                  Features
+                </a>
+              </li>
+              <li>
+                <a
+                  onClick={() => scrollTo(heroRef)}
+                  style={{ cursor: "pointer" }}
+                >
+                  How It Works
+                </a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
             </ul>
           </div>
 
           <div className="footer-section">
             <h4>Legal</h4>
             <ul>
-              <li><a href="#privacy">Privacy Policy</a></li>
-              <li><a href="#terms">Terms of Service</a></li>
-              <li><a href="#cookies">Cookies</a></li>
+              <li>
+                <a href="#privacy">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#terms">Terms of Service</a>
+              </li>
+              <li>
+                <a href="#cookies">Cookies</a>
+              </li>
             </ul>
           </div>
 
@@ -266,9 +323,12 @@ export default function LandingPage({ onLogin }) {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; 2026 RTI Assistant. Made for ADCET Hackathon 2026. All rights reserved.</p>
+          <p>
+            &copy; 2026 RTI Assistant. Made for ADCET Hackathon 2026. All rights
+            reserved.
+          </p>
         </div>
       </footer>
     </div>
-  )
+  );
 }

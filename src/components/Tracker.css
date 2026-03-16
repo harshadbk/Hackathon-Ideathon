@@ -399,6 +399,20 @@
    RESPONSIVE DESIGN
 ===================================================== */
 
+/* Tablet & Large Screens (1025px - 1440px) */
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .tracker-container {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .tracker-stats {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+}
+
+/* Large Tablet (769px - 1024px) */
 @media (max-width: 1200px) {
   .tracker-container {
     padding: 20px;
@@ -411,6 +425,7 @@
   }
 }
 
+/* Tablet Portrait (768px - 1024px) */
 @media (max-width: 1024px) {
   .tracker-header {
     flex-direction: column;
@@ -432,7 +447,8 @@
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile Large (481px - 767px) */
+@media (max-width: 767px) {
   .tracker-container {
     padding: 16px;
     gap: 16px;
@@ -448,6 +464,7 @@
 
   .tracker-stats {
     grid-template-columns: 1fr;
+    gap: 14px;
   }
 
   .tracker-stat {
@@ -481,6 +498,7 @@
   }
 }
 
+/* Mobile Medium (401px - 480px) */
 @media (max-width: 480px) {
   .tracker-container {
     padding: 12px;
@@ -598,5 +616,102 @@
   .toggle-btn {
     padding: 5px 10px;
     font-size: 11px;
+  }
+}
+
+/* Mobile Small (321px - 400px) */
+@media (max-width: 400px) {
+  .tracker-container {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .tracker-title h1 {
+    font-size: 16px;
+  }
+
+  .tracker-title p {
+    font-size: 10px;
+  }
+
+  .tracker-stat {
+    padding: 10px;
+  }
+
+  .stat-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .stat-number {
+    font-size: 18px;
+  }
+
+  .stat-label {
+    font-size: 9px;
+  }
+
+  .timeline-entry {
+    padding-left: 44px;
+  }
+
+  .timeline-entry::before {
+    width: 28px;
+    height: 28px;
+  }
+
+  .activity-avatar {
+    width: 24px;
+    height: 24px;
+    font-size: 9px;
+  }
+}
+
+/* Mobile Extra Small (max 320px) */
+@media (max-width: 320px) {
+  .tracker-container {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .tracker-title h1 {
+    font-size: 14px;
+  }
+
+  .tracker-title p {
+    font-size: 9px;
+  }
+
+  .tracker-stats {
+    gap: 10px;
+  }
+
+  .tracker-stat {
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .stat-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .stat-label {
+    font-size: 8px;
+  }
+
+  .stat-number {
+    font-size: 16px;
+  }
+
+  .timeline-entry {
+    padding-left: 40px;
+  }
+
+  .timeline-entry::before {
+    width: 24px;
+    height: 24px;
   }
 }

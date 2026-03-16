@@ -379,6 +379,24 @@
    RESPONSIVE DESIGN
 ===================================================== */
 
+/* Tablet & Large Screens (1025px - 1440px) */
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .guide-container {
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .guides-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+  }
+
+  .guide-detail {
+    padding: 20px;
+  }
+}
+
+/* Tablet Portrait (768px - 1024px) */
 @media (max-width: 1024px) {
   .guide-container {
     padding: 20px;
@@ -399,7 +417,8 @@
   }
 }
 
-@media (max-width: 768px) {
+/* Mobile Large (481px - 767px) */
+@media (max-width: 767px) {
   .guide-container {
     padding: 16px;
     gap: 16px;
@@ -429,6 +448,7 @@
 
   .guides-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .guide-card-image {
@@ -460,6 +480,7 @@
   }
 }
 
+/* Mobile Medium (401px - 480px) */
 @media (max-width: 480px) {
   .guide-container {
     padding: 12px;
@@ -467,7 +488,7 @@
   }
 
   .guide-header {
-    padding-bottom: 16px;
+    padding-bottom: 14px;
   }
 
   .guide-header h1 {
@@ -583,6 +604,90 @@
   }
 
   .related-guide-desc {
+    font-size: 10px;
+  }
+}
+
+/* Mobile Small (321px - 400px) */
+@media (max-width: 400px) {
+  .guide-container {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .guide-header h1 {
+    font-size: 18px;
+  }
+
+  .guide-header p {
+    font-size: 12px;
+  }
+
+  .guide-search-box input {
+    padding: 9px 32px 9px 11px;
+    font-size: 12px;
+  }
+
+  .guide-card-image {
+    height: 100px;
+    font-size: 28px;
+  }
+
+  .guide-card-content {
+    padding: 10px;
+  }
+
+  .guide-detail {
+    padding: 10px;
+  }
+
+  .guide-detail-title {
+    font-size: 16px;
+  }
+
+  .guide-section h3 {
+    font-size: 13px;
+  }
+}
+
+/* Mobile Extra Small (max 320px) */
+@media (max-width: 320px) {
+  .guide-container {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .guide-header {
+    padding-bottom: 10px;
+  }
+
+  .guide-header h1 {
+    font-size: 16px;
+  }
+
+  .guide-header p {
+    font-size: 11px;
+  }
+
+  .guide-card-image {
+    height: 80px;
+    font-size: 24px;
+  }
+
+  .guide-card-content {
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .guide-card-title {
+    font-size: 11px;
+  }
+
+  .guide-card-desc {
+    font-size: 9px;
+  }
+
+  .related-guide-title {
     font-size: 10px;
   }
 }
