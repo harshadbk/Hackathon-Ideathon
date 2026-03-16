@@ -213,36 +213,117 @@ useEffect(() => {
 
           <div className="features-grid">
 
-            <div className="feature-card">
-              <div className="feature-icon">🤖</div>
-              <h3>AI-Powered Drafting</h3>
-              <p>
-                Smart templates and AI assistance to draft perfect RTI requests.
-              </p>
-            </div>
+  <div className="feature-card">
+    <div className="feature-icon">🤖</div>
+    <h3>AI-Powered Drafting</h3>
+    <p>
+      Smart templates and AI assistance to draft perfect RTI requests quickly and accurately.
+    </p>
+  </div>
 
-            <div className="feature-card">
-              <div className="feature-icon">📊</div>
-              <h3>Real-Time Tracking</h3>
-              <p>
-                Monitor your RTI requests with live updates.
-              </p>
-            </div>
+  <div className="feature-card">
+    <div className="feature-icon">📡</div>
+    <h3>Real-Time Tracking</h3>
+    <p>
+      Monitor your RTI requests with live status updates from departments.
+    </p>
+  </div>
 
-            <div className="feature-card">
-              <div className="feature-icon">⚡</div>
-              <h3>Auto Appeal Generation</h3>
-              <p>
-                Automatically generate appeals if response isn't received.
-              </p>
-            </div>
+  <div className="feature-card">
+    <div className="feature-icon">⚡</div>
+    <h3>Auto Appeal Generation</h3>
+    <p>
+      Automatically generate first or second appeals if responses are delayed.
+    </p>
+  </div>
 
-          </div>
+  <div className="feature-card">
+    <div className="feature-icon">📊</div>
+    <h3>Department Analytics</h3>
+    <p>
+      View performance analytics and response statistics for different government departments.
+    </p>
+  </div>
+
+  <div className="feature-card">
+    <div className="feature-icon">⭐</div>
+    <h3>Citizen Reviews</h3>
+    <p>
+      Citizens can rate departments and share feedback about their RTI experience.
+    </p>
+  </div>
+
+  <div className="feature-card">
+    <div className="feature-icon">📄</div>
+    <h3>Report Generation</h3>
+    <p>
+      Generate structured reports of RTI requests, responses, and department activity.
+    </p>
+  </div>
+
+</div>
 
         </div>
 
       </section>
+{/* ROLES / STAKEHOLDERS */}
+<section className="landing-roles" ref={rolesRef}>
 
+  <div className="roles-container">
+
+    <h2 className="roles-title">For Every Stakeholder</h2>
+
+    <div className="roles-grid">
+
+      <div className="role-card">
+        <div className="role-icon">👤</div>
+        <h3>For Citizens</h3>
+        <p>
+          File RTI requests, track status, and get timely appeals
+        </p>
+
+        <ul>
+          <li>✏ Easy Drafting</li>
+          <li>📊 Live Tracking</li>
+          <li>⚡ Auto Appeals</li>
+        </ul>
+      </div>
+
+
+      <div className="role-card">
+        <div className="role-icon">🧑‍💼</div>
+        <h3>For PIO Officers</h3>
+        <p>
+          Manage RTI requests, respond efficiently, and maintain records
+        </p>
+
+        <ul>
+          <li>📄 Request Management</li>
+          <li>📅 Deadline Tracking</li>
+          <li>📈 Analytics</li>
+        </ul>
+      </div>
+
+
+      <div className="role-card">
+        <div className="role-icon">⚖</div>
+        <h3>For Appellate Authority</h3>
+        <p>
+          Review appeals, maintain compliance, and ensure fair decisions
+        </p>
+
+        <ul>
+          <li>📑 Appeal Review</li>
+          <li>⚖ Case Management</li>
+          <li>📊 Reports</li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
       {/* HOW IT WORKS */}
       <section className="landing-how-it-works">

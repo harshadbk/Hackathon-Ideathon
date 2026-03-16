@@ -1443,3 +1443,49 @@ body {
 }
 
 
+.landing-hero{
+  padding-top:50px;
+  padding-bottom:80px;
+}
+
+.hero-title{
+  margin-top:0;
+}
+
+
+.features-grid{
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: nowrap;   /* prevents wrapping */
+}
+
+.feature-card{
+  flex: 1;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.feature-icon{
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.feature-card h3{
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.feature-card p{
+  font-size: 13px;
+}
+
+
+.feature-card p{
+  font-size: 13px;
+}
+
+
+
