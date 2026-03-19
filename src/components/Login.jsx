@@ -37,7 +37,7 @@ export default function Login({ onLogin }) {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:8000/auth/login", {
+      const res = await fetch("https://rtibackend-production-1234.up.railway.app/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password, role: selectedRole }),
@@ -82,7 +82,7 @@ export default function Login({ onLogin }) {
     }
 
     if (!validateEmail(email)) {
-      toast.setError("Invalid email format! Please enter a correct email.");
+      toast.error("Invalid email format! Please enter a correct email.");
       return;
     }
 
@@ -94,7 +94,7 @@ export default function Login({ onLogin }) {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:8000/auth/signup", {
+      const res = await fetch("https://rtibackend-production-1234.up.railway.app/auth/signup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
