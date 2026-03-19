@@ -21,6 +21,7 @@ import AuthorityDashboard from './components/AuthorityDashboard'
 import { loadRequests, saveRequests } from './utils/storage'
 import mockRequests from './data/mockRequests'
 import LandingPage from './components/LandingPage'
+import { Toaster } from "react-hot-toast";
 
 // Detail Page Wrapper Component
 function DetailPageWrapper({ requests, onUpdate }) {
@@ -313,6 +314,7 @@ function AppContent() {
 export default function App() {
   return (
     <BrowserRouter>
+    <Toaster position="top-right" />
       <AppContent />
     </BrowserRouter>
   )

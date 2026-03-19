@@ -166,6 +166,7 @@ html, body {
 
 .landing-hero {
   padding: 80px 28px;
+  height: 700px;
   background: linear-gradient(135deg, #f8fafb 0%, #f0f4f8 100%);
   flex: 1;
   display: flex;
