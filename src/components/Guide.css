@@ -1,0 +1,6 @@
+.guide-step { display: flex; gap: var(--sp-5); margin-bottom: var(--sp-5); padding-bottom: var(--sp-5); border-bottom: 1px solid var(--border-lt); }
+.guide-step:last-child { border-bottom: none; margin-bottom: 0; }
+.guide-step-num { width: 40px; height: 40px; background: var(--navy); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 0.9rem; font-weight: 700; flex-shrink: 0; }
+.guide-step-body { flex: 1; }
+.guide-link { color: var(--navy-3); font-weight: 500; display: block; padding: 4px 0; transition: color var(--tr); }
+.guide-link:hover { color: var(--saffron); }

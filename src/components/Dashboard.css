@@ -1,0 +1,60 @@
+/* GOV PAGE HEADER */
+.gov-page-header {
+  background: var(--navy);
+  border-bottom: 3px solid var(--saffron);
+  margin-bottom: var(--sp-6);
+}
+.gov-page-header-inner {
+  max-width: 1280px; margin: 0 auto;
+  padding: var(--sp-6) var(--sp-6) var(--sp-5);
+}
+.gov-breadcrumb { font-size: 0.72rem; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: var(--sp-2); }
+.gov-page-title-row { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--sp-4); flex-wrap: wrap; }
+.gov-page-h1 { font-family: var(--serif); font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 4px; }
+.gov-page-sub { font-size: 0.82rem; color: rgba(255,255,255,0.6); }
+
+/* SECTION HEADER */
+.dash-section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--sp-4); }
+.dash-section-title { display: flex; align-items: center; gap: var(--sp-2); }
+.dash-section-icon { font-size: 1rem; }
+
+/* EMPTY STATE */
+.dash-empty {
+  text-align: center;
+  padding: var(--sp-12) var(--sp-6);
+  background: var(--white);
+  border: 1px dashed var(--border);
+  border-radius: var(--r-md);
+}
+.dash-empty-icon { font-size: 2.5rem; margin-bottom: var(--sp-3); }
+.dash-empty h3 { color: var(--text-2); font-family: var(--serif); margin-bottom: var(--sp-2); }
+.dash-empty p { color: var(--muted); font-size: 0.875rem; max-width: 400px; margin: 0 auto; line-height: 1.6; }
+
+/* QUICK ACTIONS */
+.dash-quick-action {
+  display: flex; align-items: center; gap: var(--sp-3);
+  width: 100%; padding: var(--sp-3);
+  background: none; border: none;
+  border-radius: var(--r-sm);
+  font-size: 0.875rem; font-weight: 500;
+  color: var(--text-2); cursor: pointer;
+  transition: all var(--tr); font-family: var(--sans);
+  text-align: left; margin-bottom: 2px;
+}
+.dash-quick-action:hover { background: var(--white); color: var(--navy); box-shadow: var(--sh-sm); }
+
+/* TIMELINE ROWS */
+.dash-timeline-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: var(--sp-2) 0;
+  border-bottom: 1px solid var(--border-lt);
+  font-size: 0.8rem;
+}
+.dash-timeline-row:last-child { border-bottom: none; }
+.dash-tl-label { color: var(--muted); }
+.dash-tl-val { font-weight: 700; color: var(--navy); }
+
+@media (max-width: 768px) {
+  .gov-page-title-row { flex-direction: column; }
+  .gov-page-h1 { font-size: 1.2rem; }
+}

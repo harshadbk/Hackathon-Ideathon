@@ -1,0 +1,5 @@
+.rc-left { flex: 1; min-width: 0; }
+.rc-id { font-family: var(--mono); font-size: 0.68rem; color: var(--muted); margin-bottom: 2px; }
+.rc-right { display: flex; flex-direction: column; align-items: flex-end; gap: var(--sp-2); flex-shrink: 0; min-width: 130px; }
+.rc-progress-wrap { width: 100px; }
+.rc-arrow { color: var(--muted); font-size: 1.2rem; font-weight: 300; }

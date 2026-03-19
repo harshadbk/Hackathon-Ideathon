@@ -1,0 +1,7 @@
+.auth-header { background: var(--navy); border-bottom: 3px solid var(--gold); }
+.auth-header-inner { max-width: 1280px; margin: 0 auto; padding: var(--sp-5) var(--sp-6); display: flex; align-items: center; justify-content: space-between; gap: var(--sp-4); }
+.auth-brand { display: flex; align-items: center; gap: var(--sp-4); }
+.auth-emblem { font-size: 2rem; }
+.auth-title { font-family: var(--serif); font-size: 1.2rem; color: #fff; font-weight: 700; }
+.auth-sub { font-size: 0.78rem; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px; }
+.auth-user { text-align: right; }

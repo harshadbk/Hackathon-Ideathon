@@ -1,0 +1,5 @@
+/* Additional responsive helpers */
+@media (max-width: 600px) {
+  .hide-mobile { display: none !important; }
+  .btn { padding: 8px var(--sp-4); font-size: 0.8rem; }
+}
